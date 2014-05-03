@@ -1,6 +1,8 @@
 apply plugin: 'java'
 
-defaultTasks 'build'
+defaultTasks 'clean', 'build', 'cobertura'
+
+
 def defaultEncoding = 'UTF-8'
 [compileJava, compileTestJava]*.options*.encoding = defaultEncoding
 
@@ -10,6 +12,10 @@ repositories {
 
 dependencies{
 	testCompile 'junit:junit:4.11'
+}
+
+buildscript {
+	apply from: 'https://github.com/valkolovos/gradle_cobertura/raw/master/repo/gradle_cobertura/gradle_cobertura/1.2.1/coberturainit.gradle'
 }
 
 sourceSets {
