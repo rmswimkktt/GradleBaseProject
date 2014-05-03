@@ -11,5 +11,9 @@ public class HelloTest{
     public void test(){
         assertThat(Hello.getOne(), is(1));
     }
+    @Test
+    public void _2を返す(){
+        assertThat(Hello.getTwo(), is(2));
+    }
 }
 
