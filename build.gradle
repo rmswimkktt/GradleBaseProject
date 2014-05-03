@@ -11,3 +11,16 @@ repositories {
 dependencies{
 	testCompile 'junit:junit:4.11'
 }
+
+sourceSets {
+	main {
+		java {
+			srcDir 'src/main/java'
+		}
+	}
+	test {
+		java{
+			srcDir 'src/test/main/java'
+		}
+	}
+}
