@@ -5,15 +5,22 @@ import static org.junit.Assert.*;
 import main.java.Hello;
 
 import org.junit.Test;
+import org.junit.experimental.runners.Enclosed;
+import org.junit.runner.RunWith;
 
+@RunWith(Enclosed.class)
 public class HelloTest{
-    @Test
-    public void test(){
-        assertThat(Hello.getOne(), is(1));
+    public static class Enclosedを使う1{
+    	@Test
+    	public void 日本語が使えるか(){
+            assertThat(Hello.getOne(), is(1));
+    	}
     }
-    @Test
-    public void _2を返す(){
-        assertThat(Hello.getTwo(), is(2));
+    public static class Enclosedを使う2{
+    	@Test
+    	public void 日本語が使えるか(){
+            assertThat(Hello.getTwo(), is(2));
+    	}
     }
 }
 
